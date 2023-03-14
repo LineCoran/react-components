@@ -1,0 +1,36 @@
+.searchWrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: 3px solid rgb(176, 106, 233);
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  margin: 1rem 0;
+  width: 35%;
+}
+
+.searchIcon {
+  width: 30px;
+  height: 30px;
+}
+
+.searchBar {
+  border: none;
+  width: 100%;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.searchBar::placeholder {
+  color: rgba(33, 136, 84, 0.353);
+  transition: 0.3s linear;
+}
+
+.searchBar:focus::placeholder {
+  color: rgba(8, 164, 86, 1);
+}
+
+.searchBar:focus {
+  outline: none;
+  color: rgba(8, 164, 86, 1);
+}

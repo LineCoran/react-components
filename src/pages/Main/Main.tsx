@@ -1,10 +1,10 @@
-import SearchBar from "../../components/SearchBar";
+import SearchBar from "../../components/UI/SearchBar";
+import "./Main.css";
 
 export default function Main() {
   return (
-    <div>
-      <h1>Main</h1>
-      <SearchBar />
+    <div className="main">
+      <SearchBar placeholder="Search..." />
     </div>
   );
 }
