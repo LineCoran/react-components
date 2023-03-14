@@ -1,0 +1,36 @@
+.card {
+  height: 500px;
+  width: 300px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.cardImage {
+  height: 40%;
+  width: 100%;
+  background-color: gray;
+}
+
+.cardPrice {
+  padding: 0.3rem 0.5rem;
+  background-color: rgba(119, 192, 201, 0.38);
+}
+
+.cardPriceValue {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+
+.cardHeart {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  border: 2px solid gray;
+  border-radius: 50%;
+}

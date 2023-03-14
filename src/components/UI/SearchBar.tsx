@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import "./SearchBar.css";
 import SvgIcons from "../SvgIcons/SvgIcons";
+import "./SearchBar.css";
 
 type SearchBarProps = {
   placeholder: string;
