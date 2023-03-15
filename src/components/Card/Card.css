@@ -1,24 +1,26 @@
 .card {
-  height: 500px;
-  width: 400px;
+  width: 300px;
   position: relative;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  -webkit-box-shadow: 0px 1px 7px 3px rgba(34, 60, 80, 0.38);
-  -moz-box-shadow: 0px 1px 7px 3px rgba(34, 60, 80, 0.38);
-  box-shadow: 0px 1px 7px 3px rgba(34, 60, 80, 0.38);
+  box-shadow: 0px 0px 9px 3px rgba(34, 60, 80, 0.38);
+  transition: 0.25s ease-out;
+}
+
+.card:hover {
+  box-shadow: 0px 0px 9px 6px rgba(50, 60, 90, 0.5);
 }
 
 .cardImage {
-  height: 50%;
+  max-height: 250px;
+  object-fit: cover;
   width: 100%;
-  background-color: gray;
 }
 
 .cardPrice {
   height: 15%;
-  padding: 0.3rem 0.5rem;
+  padding: 0.2rem 0.5rem;
   background-color: rgba(119, 192, 201, 0.38);
 }
 
@@ -53,17 +55,31 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 0.5rem;
 }
 
 .cardInfoDescrition {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical; 
+  max-height: 50px;
   font-weight: bold;
   color: rgb(56, 135, 103);
 }
 
 .cardInfoLocation {
+  overflow: hidden;
+  font-size: 14px;
   font-weight: bold;
   color: gray;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;  
+}
+
+.line-clamp {
+  
 }
 
 .cardInfoHeader {
@@ -98,6 +114,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  transition: 0.3s ease-out;
+}
+
+.cardSendMessage:hover {
+  border-color: rgba(128, 128, 128, 0.9);
 }
 
 .cardSendMessageIcon {

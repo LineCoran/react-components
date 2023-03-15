@@ -1,33 +1,43 @@
-import React from "react";
+import React, { Component } from "react";
 import "./Card.css";
+import IHotel from "types/type";
+import SvgIcons from "../SvgIcons/SvgIcons";
 
-export default function Card() {
-  return (
-    <div className="card">
-      <div className="cardImage"></div>
-      <div className="cardPrice">
-        <p className="cardPriceValue">32,500,700</p>
-        <p className="cardPriceStatus">Guide price</p>
-      </div>
-      <div className="cardInfo">
-        <div className="cardInfoHeader">
-          <div className="cardInfoText">
-            <div className="cardInfoDescrition">8 bathrooms, and terrace on street</div>
-            <div className="cardInfoLocation">Willstione park, Avenue</div>
-          </div>
-          <div className="cardInfoIcon"></div>
-        </div>
+type CardProps = {
+  card: IHotel;
+};
 
-        <div className="cardFooter">
-          <p className="cardDate"> Added on 25/02/2016</p>
-          <div className="cardSendMessage">
-            <div className="cardSendMessageIcon"></div>
+export default class Card extends Component<CardProps, object> {
+  constructor(props: CardProps) {
+    super(props);
+  }
+  render() {
+    return (
+      <div className="card">
+        <img className="cardImage" src={this.props.card.url} alt="hotel-image" />
+        <div className="cardPrice">
+          <p className="cardPriceValue">{this.props.card.price}</p>
+          <p className="cardPriceStatus">{this.props.card.priceStatus}</p>
+        </div>
+        <div className="cardInfo">
+          <div className="cardInfoHeader">
+            <div className="cardInfoText">
+              <div className="cardInfoDescrition">{this.props.card.description}</div>
+              <div className="cardInfoLocation">{this.props.card.location}</div>
+            </div>
+            <img className="cardInfoIcon" src={this.props.card.url} alt="hotel-image" />
+          </div>
+          <div className="cardFooter">
+            <p className="cardDate">{this.props.card.createdAt}</p>
+            <div className="cardSendMessage">
+              <SvgIcons id="message" />
+            </div>
           </div>
         </div>
+        <div className="cardHeart">
+          <SvgIcons id="heart" />
+        </div>
       </div>
-      <div className="cardHeart">
-        <div className="cardHearIcon"></div>
-      </div>
-    </div>
-  );
+    );
+  }
 }

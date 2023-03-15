@@ -1,0 +1,71 @@
+{
+
+  "hotels": [
+    {
+      "id": 1,
+      "name": "Britannia International Hotel Canary Wharf",
+      "url": "https://cf.bstatic.com/xdata/images/hotel/square200/50756453.webp?k=d23d46c62b6bada2611ad295c26b8afbc90fe24330d52af5eb2a2889d3720cac&o=",
+      "price": "320 BYN",
+      "priceStatus": "Guide Price",
+      "description": "Britannia International Hotel Canary Wharf has spacious rooms and limited free WiFi access in bedrooms, just 600 m from Canary Wharf Underground Station.",
+      "location": "163 Marsh Wall, Docklands,, Tower Hamlets, London, E14 9SJ, United Kingdom –",
+      "infoIcon": "https://cf.bstatic.com/xdata/images/xphoto/max240x120/2080806.webp?k=69d60588d5f2139868c4d395d47493269c801e10d4a54728da171c0a32d0a1d2&o=",
+      "createdAt": "26/12/2023"
+    },
+    {
+      "id": 2,
+      "name": "Britannia International Hotel Canary Wharf",
+      "url": "https://cf.bstatic.com/xdata/images/hotel/square200/50756453.webp?k=d23d46c62b6bada2611ad295c26b8afbc90fe24330d52af5eb2a2889d3720cac&o=",
+      "price": "400 BYN",
+      "priceStatus": "",
+      "description": "Britannia International Hotel Canary Wharf has spacious rooms and limited free WiFi access in bedrooms, just 600 m from Canary Wharf Underground Station.",
+      "location": "163 Marsh Wall, Docklands,, Tower Hamlets, London, E14 9SJ, United Kingdom –",
+      "infoIcon": "https://cf.bstatic.com/xdata/images/xphoto/max240x120/2080806.webp?k=69d60588d5f2139868c4d395d47493269c801e10d4a54728da171c0a32d0a1d2&o=",
+      "createdAt": "26/12/2023"
+    },
+    {
+      "id": 3,
+      "name": "Britannia International Hotel Canary Wharf",
+      "url": "https://cf.bstatic.com/xdata/images/hotel/square200/50756453.webp?k=d23d46c62b6bada2611ad295c26b8afbc90fe24330d52af5eb2a2889d3720cac&o=",
+      "price": "115 BYN",
+      "priceStatus": "Guide Price",
+      "description": "Britannia International Hotel Canary Wharf has spacious rooms and limited free WiFi access in bedrooms, just 600 m from Canary Wharf Underground Station.",
+      "location": "163 Marsh Wall, Docklands,, Tower Hamlets, London, E14 9SJ, United Kingdom –",
+      "infoIcon": "https://cf.bstatic.com/xdata/images/xphoto/max240x120/2080806.webp?k=69d60588d5f2139868c4d395d47493269c801e10d4a54728da171c0a32d0a1d2&o=",
+      "createdAt": "26/12/2023"
+    },
+    {
+      "id": 4,
+      "name": "Britannia International Hotel Canary Wharf",
+      "url": "https://cf.bstatic.com/xdata/images/hotel/square200/50756453.webp?k=d23d46c62b6bada2611ad295c26b8afbc90fe24330d52af5eb2a2889d3720cac&o=",
+      "price": "225 BYN",
+      "priceStatus": "Guide Price",
+      "description": "Britannia International Hotel Canary Wharf has spacious rooms and limited free WiFi access in bedrooms, just 600 m from Canary Wharf Underground Station.",
+      "location": "163 Marsh Wall, Docklands,, Tower Hamlets, London, E14 9SJ, United Kingdom –",
+      "infoIcon": "https://cf.bstatic.com/xdata/images/xphoto/max240x120/2080806.webp?k=69d60588d5f2139868c4d395d47493269c801e10d4a54728da171c0a32d0a1d2&o=",
+      "createdAt": "17/07/2021"
+    },
+    {
+      "id": 5,
+      "name": "Britannia International Hotel Canary Wharf",
+      "url": "https://cf.bstatic.com/xdata/images/hotel/square200/50756453.webp?k=d23d46c62b6bada2611ad295c26b8afbc90fe24330d52af5eb2a2889d3720cac&o=",
+      "price": "180 BYN",
+      "priceStatus": "",
+      "description": "Britannia International Hotel Canary Wharf has spacious rooms and limited free WiFi access in bedrooms, just 600 m from Canary Wharf Underground Station.",
+      "location": "163 Marsh Wall, Docklands,, Tower Hamlets, London, E14 9SJ, United Kingdom –",
+      "infoIcon": "https://cf.bstatic.com/xdata/images/xphoto/max240x120/2080806.webp?k=69d60588d5f2139868c4d395d47493269c801e10d4a54728da171c0a32d0a1d2&o=",
+      "createdAt": "05/07/2022"
+    },
+    {
+      "id": 6,
+      "name": "Britannia International Hotel Canary Wharf",
+      "url": "https://cf.bstatic.com/xdata/images/hotel/square200/50756453.webp?k=d23d46c62b6bada2611ad295c26b8afbc90fe24330d52af5eb2a2889d3720cac&o=",
+      "price": "320 BYN",
+      "priceStatus": "Guide Price",
+      "description": "Britannia International Hotel Canary Wharf has spacious rooms and limited free WiFi access in bedrooms, just 600 m from Canary Wharf Underground Station.",
+      "location": "163 Marsh Wall, Docklands,, Tower Hamlets, London, E14 9SJ, United Kingdom –",
+      "infoIcon": "https://cf.bstatic.com/xdata/images/xphoto/max240x120/2080806.webp?k=69d60588d5f2139868c4d395d47493269c801e10d4a54728da171c0a32d0a1d2&o=",
+      "createdAt": "13/11/2027"
+    }
+  ]
+}
