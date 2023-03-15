@@ -10,15 +10,20 @@ export default function Card() {
         <p className="cardPriceStatus">Guide price</p>
       </div>
       <div className="cardInfo">
-        <div className="cardInfoText">
-          <div className="cardInfoDescrition">8 bathrooms, and terrace on street</div>
-          <div className="cardInfoLocation">Willstione park, Avenue</div>
+        <div className="cardInfoHeader">
+          <div className="cardInfoText">
+            <div className="cardInfoDescrition">8 bathrooms, and terrace on street</div>
+            <div className="cardInfoLocation">Willstione park, Avenue</div>
+          </div>
+          <div className="cardInfoIcon"></div>
         </div>
-        <div className="cardInfoIcon"></div>
-      </div>
-      <div className="cardFooter">
-        <p className="cardDate"> Added on 25.02.2016</p>
-        <button className="cardSendMessage"></button>
+
+        <div className="cardFooter">
+          <p className="cardDate"> Added on 25/02/2016</p>
+          <div className="cardSendMessage">
+            <div className="cardSendMessageIcon"></div>
+          </div>
+        </div>
       </div>
       <div className="cardHeart">
         <div className="cardHearIcon"></div>
