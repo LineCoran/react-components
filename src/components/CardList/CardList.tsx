@@ -5,6 +5,7 @@ import "./CardList.css";
 
 type CardListProps = {
   hotels: IHotel[];
+  search: string;
 };
 
 export default class CardList extends Component<CardListProps, object> {
@@ -13,9 +14,12 @@ export default class CardList extends Component<CardListProps, object> {
   }
 
   render() {
+    const searchedHotels = [
+      ...this.props.hotels.filter((hotel) => hotel.description.includes(this.props.search)),
+    ];
     return (
       <div className="cardList">
-        {this.props.hotels.map((card) => (
+        {searchedHotels.map((card) => (
           <Card key={card.id} card={card} />
         ))}
       </div>

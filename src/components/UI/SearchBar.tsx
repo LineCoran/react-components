@@ -4,6 +4,8 @@ import "./SearchBar.css";
 
 type SearchBarProps = {
   placeholder: string;
+  handleInput: (value: string) => void;
+  search: string;
 };
 
 export default class SearchBar extends Component<SearchBarProps, { input: string }> {
@@ -27,8 +29,8 @@ export default class SearchBar extends Component<SearchBarProps, { input: string
         <input
           className="searchBar"
           type="text"
-          onChange={(e) => this.handleChange(e.target.value)}
-          value={this.state.input}
+          onChange={(e) => this.props.handleInput(e.target.value)}
+          value={this.props.search}
           placeholder={this.props.placeholder}
         />
       </div>
