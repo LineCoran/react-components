@@ -23,10 +23,11 @@ export default class SearchBar extends Component<SearchBarProps, { input: string
   render() {
     return (
       <div className="searchWrapper">
-        <div className="searchIcon">
+        <div data-testid="svgTestId" className="searchIcon">
           <SvgIcons id="search" />
         </div>
         <input
+          data-testid="inputTestId"
           className="searchBar"
           type="text"
           onChange={(e) => this.props.handleInput(e.target.value)}
