@@ -10,13 +10,13 @@ describe("SearchBar", () => {
     expect(input).toBeInTheDocument();
   });
 
-  it("check svg icon in input", () => {
+  it("exist svg icon in input", () => {
     render(<SearchBar placeholder="" search="" handleInput={(value) => console.log(value)} />);
     const svgIcon = screen.getByTestId("svgTestId");
     expect(svgIcon).toContain(React.Component);
   });
 
-  it("input check placeholder props", () => {
+  it("check input placeholder props", () => {
     const placeholderValue = "somethink";
     render(
       <SearchBar
@@ -29,7 +29,7 @@ describe("SearchBar", () => {
     expect(input).toBeInTheDocument();
   });
 
-  it("input check input value props", () => {
+  it("check input value equals search value", () => {
     const inputValue = "somethink";
     render(
       <SearchBar
@@ -38,7 +38,7 @@ describe("SearchBar", () => {
         handleInput={(value) => console.log(value)}
       />
     );
-    const input = screen.getByPlaceholderText(/text/i);
-    expect(input).toBeInTheDocument();
+    const input = screen.getByPlaceholderText(/text/i) as HTMLInputElement;
+    expect(input.value).toBe(inputValue);
   });
 });
