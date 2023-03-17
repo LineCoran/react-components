@@ -23,7 +23,7 @@ export default class Main extends Component<object, MainState> {
     return (
       <div className="main">
         <SearchBar
-          placeholder="Search..."
+          placeholder="Search.."
           handleInput={this.handleInput}
           search={this.state.search}
         />
