@@ -2,6 +2,8 @@ import CardList from '../../components/CardList/CardList';
 import SearchBar from '../../components/UI/SearchBar';
 import cardInfo from '../../assets/cardInfo.json';
 import { Component } from 'react';
+import NavBar from '../../components/NavBar/NavBar';
+import Container from '../../components/Container/Container';
 import './Main.css';
 
 const { hotels } = cardInfo;
@@ -16,30 +18,30 @@ export default class Main extends Component<object, MainState> {
     this.state = { search: window.localStorage.getItem('search') || '' };
   }
 
-  // componentDidMount(): void {
-  //   this.setState({ ...this.state, search: window.localStorage.getItem('search') || '' });
-  // }
+  componentDidMount(): void {
+    this.setState({ ...this.state, search: window.localStorage.getItem('search') || '' });
+  }
 
   componentWillUnmount(): void {
-    console.log('hello');
     console.log(this.state.search);
     window.localStorage.setItem('search', this.state.search);
   }
 
   handleInput = async (value: string) => {
     this.setState({ ...this.state, search: value });
-    // window.localStorage.setItem('search', this.state.search);
+    console.log(this.state.search);
   };
   render() {
     return (
-      <div className="main">
+      <Container>
+        <NavBar />
         <SearchBar
           placeholder="Search.."
           handleInput={this.handleInput}
           search={this.state.search}
         />
         <CardList hotels={hotels} search={this.state.search} />
-      </div>
+      </Container>
     );
   }
 }
