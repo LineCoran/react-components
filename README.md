@@ -1,10 +1,10 @@
-# reeact-components
+# react-components
 
 [deploy](https://linecoran.github.io/react-components/)
 
 ## Setup and Running
 
-- Clone this repo: `$ git clone https://github.com/linecoran/react-components`.
+- Clone this repo: `$ git clone https://github.com/LineCoran/react-components.git`.
 - Go to downloaded folder: `$ cd react-components`.
 - Install dependencies: `$ npm install`.
 - Start: `$ npm run dev`.
