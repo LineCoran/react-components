@@ -8,7 +8,7 @@ export default class About extends Component {
     return (
       <Container>
         <NavBar />
-        <h1>NOT FOUND PAGE</h1>
+        <h1 data-testid="titleTestId">NOT FOUND PAGE</h1>
         <Link to="/">Home</Link>
       </Container>
     );

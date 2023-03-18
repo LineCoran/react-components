@@ -29,19 +29,20 @@ export default class Main extends Component<object, MainState> {
 
   handleInput = async (value: string) => {
     this.setState({ ...this.state, search: value });
-    console.log(this.state.search);
   };
   render() {
     return (
-      <Container>
-        <NavBar />
-        <SearchBar
-          placeholder="Search.."
-          handleInput={this.handleInput}
-          search={this.state.search}
-        />
-        <CardList hotels={hotels} search={this.state.search} />
-      </Container>
+      <div data-testid="maintestid">
+        <Container>
+          <NavBar />
+          <SearchBar
+            placeholder="Search.."
+            handleInput={this.handleInput}
+            search={this.state.search}
+          />
+          <CardList hotels={hotels} search={this.state.search} />
+        </Container>
+      </div>
     );
   }
 }

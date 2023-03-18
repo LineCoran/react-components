@@ -7,7 +7,7 @@ export default class About extends Component {
     return (
       <Container>
         <NavBar />
-        <h1>Hello its about Page</h1>
+        <h1 data-testid="testTitleId">Hello its about Page</h1>
       </Container>
     );
   }
