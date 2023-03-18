@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import SvgIcons from "../SvgIcons/SvgIcons";
-import "./SearchBar.css";
+import { Component } from 'react';
+import SvgIcons from '../SvgIcons/SvgIcons';
+import './SearchBar.css';
 
 type SearchBarProps = {
   placeholder: string;
@@ -11,23 +11,15 @@ type SearchBarProps = {
 export default class SearchBar extends Component<SearchBarProps, { input: string }> {
   constructor(props: SearchBarProps) {
     super(props);
-    this.state = {
-      input: window.localStorage.getItem("search") || "",
-    };
   }
 
-  handleChange = (value: string) => {
-    this.setState({ ...this.state, input: value });
-    window.localStorage.setItem("search", value);
-  };
   render() {
     return (
       <div className="searchWrapper">
-        <div data-testid="svgTestId" className="searchIcon">
+        <div className="searchIcon">
           <SvgIcons id="search" />
         </div>
         <input
-          data-testid="inputTestId"
           className="searchBar"
           type="text"
           onChange={(e) => this.props.handleInput(e.target.value)}

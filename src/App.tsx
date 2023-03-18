@@ -1,20 +1,20 @@
-import "./App.css";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import About from "./pages/About/About";
-import Main from "./pages/Main/Main";
-import PageNotFound from "./pages/PageNotFound/PageNotFound";
+import './App.css';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import About from './pages/About/About';
+import Main from './pages/Main/Main';
+import PageNotFound from './pages/PageNotFound/PageNotFound';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <Main />,
   },
   {
-    path: "about",
+    path: 'about',
     element: <About />,
   },
   {
-    path: "*",
+    path: '*',
     element: <PageNotFound />,
   },
 ]);

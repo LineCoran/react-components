@@ -1,44 +1,40 @@
-import { describe, it } from "vitest";
-import { screen, render } from "@testing-library/react";
-import SearchBar from "./SearchBar";
-import React from "react";
+import { describe, vi } from 'vitest';
+import { screen, render } from '@testing-library/react';
+import SearchBar from './SearchBar';
+import userEvent from '@testing-library/user-event';
+import React from 'react';
 
-describe("SearchBar", () => {
-  it("render input", () => {
-    render(<SearchBar placeholder="" search="" handleInput={(value) => console.log(value)} />);
-    const input = screen.getByTestId("inputTestId");
-    expect(input).toBeInTheDocument();
-  });
+describe('SearchBar', () => {
+  const testIdValue = 'adsf2214sdfno';
+  const placeholder = 'search';
+  const inputValue = 'hello';
+  const handleInput = vi.fn();
+  let input: HTMLInputElement;
 
-  it("exist svg icon in input", () => {
-    render(<SearchBar placeholder="" search="" handleInput={(value) => console.log(value)} />);
-    const svgIcon = screen.getByTestId("svgTestId");
-    expect(svgIcon).toContain(React.Component);
-  });
-
-  it("check input placeholder props", () => {
-    const placeholderValue = "somethink";
+  beforeEach(() => {
     render(
       <SearchBar
-        placeholder={placeholderValue}
-        search=""
-        handleInput={(value) => console.log(value)}
-      />
-    );
-    const input = screen.getByPlaceholderText(placeholderValue);
-    expect(input).toBeInTheDocument();
-  });
-
-  it("check input value equals search value", () => {
-    const inputValue = "somethink";
-    render(
-      <SearchBar
-        placeholder="text"
+        data-testid={testIdValue}
+        placeholder={placeholder}
         search={inputValue}
-        handleInput={(value) => console.log(value)}
+        handleInput={handleInput}
       />
     );
-    const input = screen.getByPlaceholderText(/text/i) as HTMLInputElement;
+
+    input = screen.getByRole('textbox') as HTMLInputElement;
+  });
+
+  test('check default input value', () => {
     expect(input.value).toBe(inputValue);
+  });
+
+  test('check default placeholder value', () => {
+    expect(input.placeholder).toBe(placeholder);
+  });
+
+  test('user change data - called onChange callback', async () => {
+    await userEvent.type(input, 'mo');
+    expect(handleInput).toBeCalledWith('hellom');
+    expect(handleInput).toBeCalledWith('helloo');
   });
 });

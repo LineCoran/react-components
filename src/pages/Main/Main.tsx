@@ -1,8 +1,8 @@
-import CardList from "../../components/CardList/CardList";
-import SearchBar from "../../components/UI/SearchBar";
-import cardInfo from "../../assets/cardInfo.json";
-import { Component } from "react";
-import "./Main.css";
+import CardList from '../../components/CardList/CardList';
+import SearchBar from '../../components/UI/SearchBar';
+import cardInfo from '../../assets/cardInfo.json';
+import { Component } from 'react';
+import './Main.css';
 
 const { hotels } = cardInfo;
 
@@ -13,7 +13,7 @@ type MainState = {
 export default class Main extends Component<object, MainState> {
   constructor(props: object) {
     super(props);
-    this.state = { search: "" };
+    this.state = { search: '' };
   }
 
   handleInput = (value: string) => {

@@ -4,12 +4,13 @@ type SvgIconProps = {
 
 export default function SvgIcons({ id }: SvgIconProps) {
   switch (id) {
-    case "search":
+    case 'search':
       return (
         <svg
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
           xmlnsXlink="http://www.w3.org/1999/xlink"
+          data-testid="search"
         >
           <defs>
             <path
@@ -41,8 +42,7 @@ export default function SvgIcons({ id }: SvgIconProps) {
           </g>
         </svg>
       );
-      break;
-    case "heart":
+    case 'heart':
       return (
         <svg
           viewBox="0 0 32 32"
@@ -54,6 +54,7 @@ export default function SvgIcons({ id }: SvgIconProps) {
           xmlnsXlink="http://www.w3.org/1999/xlink"
           height="30px"
           width="30px"
+          data-testid="heart"
         >
           <path
             d="M16,8.064c-2.974-2.753-7.796-2.753-10.77,0s-2.974,7.215,0,9.968L16,28l10.77-9.968  c2.974-2.753,2.974-7.215,0-9.968S18.974,5.312,16,8.064z"
@@ -92,8 +93,7 @@ export default function SvgIcons({ id }: SvgIconProps) {
           />
         </svg>
       );
-      break;
-    case "message":
+    case 'message':
       return (
         <svg
           width="40px"
@@ -104,18 +104,19 @@ export default function SvgIcons({ id }: SvgIconProps) {
           xmlSpace="preserve"
           xmlns="http://www.w3.org/2000/svg"
           xmlnsXlink="http://www.w3.org/1999/xlink"
+          data-testid="message"
         >
           <g>
             <g>
               <g>
-                <rect height="3.9" style={{ fill: "#4DE0F9" }} width="9.5" x="31.9" y="31.3" />
+                <rect height="3.9" style={{ fill: '#4DE0F9' }} width="9.5" x="31.9" y="31.3" />
               </g>
             </g>
             <g>
               <g>
                 <polygon
                   points="37.2,19.3 41.4,16.5 41.4,35.1 37.2,35.1"
-                  style={{ fill: "#4DE0F9" }}
+                  style={{ fill: '#4DE0F9' }}
                 />
               </g>
             </g>
@@ -123,7 +124,7 @@ export default function SvgIcons({ id }: SvgIconProps) {
               <g>
                 <path
                   d="M40.5,34.1H10V14.3h30.5V34.1z M11.2,32.9h28.1V15.5H11.2V32.9z"
-                  style={{ fill: "#0D5FC3" }}
+                  style={{ fill: '#0D5FC3' }}
                 />
               </g>
             </g>
@@ -131,7 +132,7 @@ export default function SvgIcons({ id }: SvgIconProps) {
               <g>
                 <rect
                   height="9.2"
-                  style={{ fill: "#0D5FC3" }}
+                  style={{ fill: '#0D5FC3' }}
                   transform="matrix(0.5369 0.8436 -0.8436 0.5369 31.3013 -22.358)"
                   width="1.2"
                   x="35.4"
@@ -143,7 +144,7 @@ export default function SvgIcons({ id }: SvgIconProps) {
               <g>
                 <rect
                   height="1.2"
-                  style={{ fill: "#0D5FC3" }}
+                  style={{ fill: '#0D5FC3' }}
                   transform="matrix(0.8439 0.5365 -0.5365 0.8439 11.5246 -5.0365)"
                   width="9"
                   x="9.9"
@@ -153,19 +154,19 @@ export default function SvgIcons({ id }: SvgIconProps) {
             </g>
             <g>
               <g>
-                <rect height="4.6" style={{ fill: "#4DE0F9" }} width="1.5" x="12.8" y="27.1" />
+                <rect height="4.6" style={{ fill: '#4DE0F9' }} width="1.5" x="12.8" y="27.1" />
               </g>
             </g>
             <g>
               <g>
-                <rect height="1.5" style={{ fill: "#4DE0F9" }} width="1.5" x="12.8" y="24.2" />
+                <rect height="1.5" style={{ fill: '#4DE0F9' }} width="1.5" x="12.8" y="24.2" />
               </g>
             </g>
             <g>
               <g>
                 <path
                   d="M26.2,18.8c-0.1,0-0.2,0-0.3,0c1.4,1.2,2.3,2.9,2.3,4.9c0,3.4-2.7,6.2-6.1,6.4     c1.1,0.9,2.6,1.5,4.1,1.5c3.5,0,6.4-2.9,6.4-6.4S29.7,18.8,26.2,18.8z"
-                  style={{ fill: "#4DE0F9" }}
+                  style={{ fill: '#4DE0F9' }}
                 />
               </g>
             </g>
@@ -173,7 +174,7 @@ export default function SvgIcons({ id }: SvgIconProps) {
               <g>
                 <path
                   d="M25.2,31.3c-3.9,0-7-3.1-7-7c0-3.9,3.1-7,7-7s7,3.1,7,7C32.2,28.1,29.1,31.3,25.2,31.3z      M25.2,18.4c-3.2,0-5.8,2.6-5.8,5.8s2.6,5.8,5.8,5.8s5.8-2.6,5.8-5.8S28.4,18.4,25.2,18.4z"
-                  style={{ fill: "#0D5FC3" }}
+                  style={{ fill: '#0D5FC3' }}
                 />
               </g>
             </g>
@@ -182,21 +183,20 @@ export default function SvgIcons({ id }: SvgIconProps) {
                 <g>
                   <polygon
                     points="25.9,27.3 25,26.5 27.4,24.1 25,21.8 25.9,20.9 29.1,24.1     "
-                    style={{ fill: "#0D5FC3" }}
+                    style={{ fill: '#0D5FC3' }}
                   />
                 </g>
               </g>
               <g>
                 <g>
-                  <rect height="1.2" style={{ fill: "#0D5FC3" }} width="5.8" x="22.4" y="23.5" />
+                  <rect height="1.2" style={{ fill: '#0D5FC3' }} width="5.8" x="22.4" y="23.5" />
                 </g>
               </g>
             </g>
           </g>
         </svg>
       );
-      break;
     default:
-      return <svg></svg>;
+      return <svg data-testid="empty-svg" />;
   }
 }

@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import "./Card.css";
-import IHotel from "types/type";
-import SvgIcons from "../SvgIcons/SvgIcons";
+import React, { Component } from 'react';
+import IHotel from 'types/type';
+import SvgIcons from '../SvgIcons/SvgIcons';
+import './Card.css';
 
 type CardProps = {
   card: IHotel;

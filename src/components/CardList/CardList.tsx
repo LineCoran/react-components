@@ -1,7 +1,7 @@
-import Card from "../Card/Card";
-import { Component } from "react";
-import IHotel from "types/type";
-import "./CardList.css";
+import Card from '../Card/Card';
+import { Component } from 'react';
+import IHotel from 'types/type';
+import './CardList.css';
 
 type CardListProps = {
   hotels: IHotel[];
@@ -18,7 +18,7 @@ export default class CardList extends Component<CardListProps, object> {
       ...this.props.hotels.filter((hotel) => hotel.description.includes(this.props.search)),
     ];
     return (
-      <div className="cardList">
+      <div className="cardList" data-testid="cardListTestId">
         {searchedHotels.map((card) => (
           <Card key={card.id} card={card} />
         ))}
