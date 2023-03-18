@@ -1,26 +1,19 @@
 import './App.css';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { Route, Routes, HashRouter } from 'react-router-dom';
 import About from './pages/About/About';
 import Main from './pages/Main/Main';
 import PageNotFound from './pages/PageNotFound/PageNotFound';
 
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <Main />,
-  },
-  {
-    path: 'about',
-    element: <About />,
-  },
-  {
-    path: '*',
-    element: <PageNotFound />,
-  },
-]);
-
 function App() {
-  return <RouterProvider router={router}></RouterProvider>;
+  return (
+    <HashRouter>
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/about" element={<About />} />
+        <Route path="*" element={<PageNotFound />} />
+      </Routes>
+    </HashRouter>
+  );
 }
 
 export default App;

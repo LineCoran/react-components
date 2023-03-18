@@ -13,11 +13,22 @@ type MainState = {
 export default class Main extends Component<object, MainState> {
   constructor(props: object) {
     super(props);
-    this.state = { search: '' };
+    this.state = { search: window.localStorage.getItem('search') || '' };
   }
 
-  handleInput = (value: string) => {
+  // componentDidMount(): void {
+  //   this.setState({ ...this.state, search: window.localStorage.getItem('search') || '' });
+  // }
+
+  componentWillUnmount(): void {
+    console.log('hello');
+    console.log(this.state.search);
+    window.localStorage.setItem('search', this.state.search);
+  }
+
+  handleInput = async (value: string) => {
     this.setState({ ...this.state, search: value });
+    // window.localStorage.setItem('search', this.state.search);
   };
   render() {
     return (
