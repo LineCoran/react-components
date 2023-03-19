@@ -1,0 +1,26 @@
+
+
+.nav {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(234, 234, 234);
+}
+
+.navList {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+
+.navItem {
+  list-style: none;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.active {
+  border-bottom: 2px solid #162531;
+}
