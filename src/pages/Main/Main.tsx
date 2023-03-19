@@ -34,7 +34,7 @@ export default class Main extends Component<object, MainState> {
     return (
       <div data-testid="maintestid">
         <Container>
-          <NavBar />
+          <NavBar pageName="Main" />
           <SearchBar
             placeholder="Search.."
             handleInput={this.handleInput}

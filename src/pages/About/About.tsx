@@ -7,7 +7,7 @@ export default class About extends Component {
   render() {
     return (
       <Container>
-        <NavBar />
+        <NavBar pageName="About" />
         <h1 className="aboutTitle" data-testid="testTitleId">
           Hello its about Page
         </h1>

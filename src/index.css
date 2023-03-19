@@ -16,11 +16,13 @@
 
 a {
   font-weight: 500;
-  color: white;
+  color: #213547;
   text-decoration: inherit;
+  transition: 0.3s ease-out;
+  list-style: none;
 }
 a:hover {
-  color: #e2e759;
+  color: #162531;
 }
 
 body {
@@ -60,10 +62,11 @@ button:focus-visible {
     color: #213547;
     background-color: #ffffff;
   }
-  a:hover {
-    color: #747bff;
-  }
   button {
     background-color: #f9f9f9;
   }
+}
+
+li {
+  list-style: none;
 }
