@@ -22,6 +22,9 @@ export default class extends Component<NavBarProps, object> {
           <li className={this.props.pageName === 'About' ? 'navItem active' : 'navItem'}>
             {<Link to={'/about'}>About</Link>}
           </li>
+          <li className={this.props.pageName === 'Form' ? 'navItem active' : 'navItem'}>
+            {<Link to={'/form'}>Form</Link>}
+          </li>
         </ul>
       </nav>
     );
