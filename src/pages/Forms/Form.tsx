@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Container from '../../components/Container/Container';
 import NavBar from '../../components/NavBar/NavBar';
+import { Checkbox } from '../../components/UI/Checkbox/Checkbox';
 import './Form.css';
 
 type FormState = {
@@ -17,15 +18,17 @@ export default class Form extends Component<object, FormState> {
   dateInput = React.createRef<HTMLInputElement>();
   selectInput = React.createRef<HTMLSelectElement>();
 
-  checkboxes = [
-    React.createRef<HTMLInputElement>(),
-    React.createRef<HTMLInputElement>(),
-    React.createRef<HTMLInputElement>(),
-  ];
+  chechbox1 = React.createRef<HTMLInputElement>();
+  chechbox2 = React.createRef<HTMLInputElement>();
+  chechbox3 = React.createRef<HTMLInputElement>();
+
+  checkboxesNames = ['Money', 'Family', 'Work'];
+  checkboxesRefs = [this.chechbox1, this.chechbox2, this.chechbox3];
 
   getCheckboxValue = function (allCheckbox: React.RefObject<HTMLInputElement>[]) {
     const result: string[] = [];
     allCheckbox.forEach((checkbox) => {
+      console.log(checkbox);
       if (checkbox.current?.checked) result.push(checkbox.current.value);
     });
     return result.join('---');
@@ -36,7 +39,7 @@ export default class Form extends Component<object, FormState> {
     const textInput = `Text: ${this.textInput.current?.value}\n`;
     const dateInput = `Date: ${this.dateInput.current?.value}\n`;
     const selectInput = `Selected: ${this.selectInput.current?.value}\n`;
-    const checkboxesValues = `Checkbox: ${this.getCheckboxValue(this.checkboxes)}\n`;
+    const checkboxesValues = `Checkbox: ${this.getCheckboxValue(this.checkboxesRefs)}\n`;
     alert(textInput + dateInput + selectInput + checkboxesValues);
   };
 
@@ -60,7 +63,10 @@ export default class Form extends Component<object, FormState> {
           </select>
 
           <fieldset className="fieldset">
-            <div className="checkbox">
+            {this.checkboxesNames.map((name, index) => (
+              <Checkbox key={index} ref={this.checkboxesRefs[index]} name={name} />
+            ))}
+            {/* <div className="checkbox">
               <input
                 type="checkbox"
                 ref={this.checkboxes[0]}
@@ -91,7 +97,7 @@ export default class Form extends Component<object, FormState> {
                 value="money3"
               />
               <p>Money3</p>
-            </div>
+            </div> */}
           </fieldset>
 
           <button onClick={(event) => this.showName(event)}>Click</button>
