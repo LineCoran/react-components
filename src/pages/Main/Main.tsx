@@ -1,5 +1,5 @@
 import CardList from '../../components/CardList/CardList';
-import SearchBar from '../../components/UI/SearchBar';
+import SearchBar from '../../components/UI/SearchBar/SearchBar';
 import cardInfo from '../../assets/cardInfo.json';
 import { Component } from 'react';
 import NavBar from '../../components/NavBar/NavBar';

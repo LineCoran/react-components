@@ -1,33 +1,45 @@
-import React, { Component, useRef } from 'react';
+import React, { Component } from 'react';
 import Container from '../../components/Container/Container';
 import NavBar from '../../components/NavBar/NavBar';
 import './Form.css';
 
 type FormState = {
   name: string;
-}
+};
 
 export default class Form extends Component<object, FormState> {
-  private textInput: React.RefObject<HTMLInputElement>;
-  private dateInput: React.RefObject<HTMLInputElement>;
-  private selectInput: React.RefObject<HTMLSelectElement>;
   constructor(props: FormState) {
     super(props);
     this.state = { name: '' };
-    this.textInput = React.createRef();
-    this.dateInput = React.createRef();
-    this.selectInput = React.createRef();
   }
+
+  textInput = React.createRef<HTMLInputElement>();
+  dateInput = React.createRef<HTMLInputElement>();
+  selectInput = React.createRef<HTMLSelectElement>();
+
+  checkboxes = [
+    React.createRef<HTMLInputElement>(),
+    React.createRef<HTMLInputElement>(),
+    React.createRef<HTMLInputElement>(),
+  ];
+
+  getCheckboxValue = function (allCheckbox: React.RefObject<HTMLInputElement>[]) {
+    const result: string[] = [];
+    allCheckbox.forEach((checkbox) => {
+      if (checkbox.current?.checked) result.push(checkbox.current.value);
+    });
+    return result.join('---');
+  };
 
   showName = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     e.preventDefault();
     const textInput = `Text: ${this.textInput.current?.value}\n`;
     const dateInput = `Date: ${this.dateInput.current?.value}\n`;
     const selectInput = `Selected: ${this.selectInput.current?.value}\n`;
-    alert(textInput+dateInput+selectInput);
-  }
+    const checkboxesValues = `Checkbox: ${this.getCheckboxValue(this.checkboxes)}\n`;
+    alert(textInput + dateInput + selectInput + checkboxesValues);
+  };
 
-  
   render() {
     return (
       <Container>
@@ -36,33 +48,52 @@ export default class Form extends Component<object, FormState> {
           Hello its FORM page
         </h1>
 
-        <form className='form'>
+        <form className="form">
           <input type="text" ref={this.textInput} />
 
-          <input type="date" ref={this.dateInput}/>
+          <input type="date" ref={this.dateInput} />
 
-          <select ref={this.selectInput} name="" id="" >
+          <select ref={this.selectInput} name="" id="">
             <option value="first">first</option>
             <option value="second">second</option>
             <option value="thirth">thirth</option>
           </select>
 
-          <fieldset className='fieldset' >
-            <div className='checkbox'>
-              <input type="checkbox" id='money' name='form' value="money" />
-              <p>Money</p>
+          <fieldset className="fieldset">
+            <div className="checkbox">
+              <input
+                type="checkbox"
+                ref={this.checkboxes[0]}
+                id="money1"
+                name="form"
+                value="money1"
+              />
+              <p>Money1</p>
             </div>
 
-            <div className='checkbox'>
-              <input type="checkbox" id='money' name='form' value="family" />
-              <p>Family</p>
+            <div className="checkbox">
+              <input
+                type="checkbox"
+                ref={this.checkboxes[1]}
+                id="money2"
+                name="form"
+                value="money2"
+              />
+              <p>Money2</p>
             </div>
 
-            <div className='checkbox'>
-              <input type="checkbox" id='money' name='form' value="work" />
-              <p>Work</p>
+            <div className="checkbox">
+              <input
+                type="checkbox"
+                ref={this.checkboxes[2]}
+                id="money3"
+                name="form"
+                value="money3"
+              />
+              <p>Money3</p>
             </div>
           </fieldset>
+
           <button onClick={(event) => this.showName(event)}>Click</button>
         </form>
       </Container>

@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import SvgIcons from '../SvgIcons/SvgIcons';
+import SvgIcons from '../../SvgIcons/SvgIcons';
 import './SearchBar.css';
 
 type SearchBarProps = {
