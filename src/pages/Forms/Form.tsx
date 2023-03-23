@@ -47,7 +47,7 @@ export default class Form extends Component<object, FormState> {
             <option value="thirth">thirth</option>
           </select>
 
-          <fieldset className='fieldset'>
+          <fieldset className='fieldset' >
             <div className='checkbox'>
               <input type="checkbox" id='money' name='form' value="money" />
               <p>Money</p>
