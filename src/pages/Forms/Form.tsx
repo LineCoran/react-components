@@ -18,17 +18,14 @@ export default class Form extends Component<object, FormState> {
   dateInput = React.createRef<HTMLInputElement>();
   selectInput = React.createRef<HTMLSelectElement>();
 
-  chechbox1 = React.createRef<HTMLInputElement>();
-  chechbox2 = React.createRef<HTMLInputElement>();
-  chechbox3 = React.createRef<HTMLInputElement>();
-
-  checkboxesNames = ['Money', 'Family', 'Work'];
-  checkboxesRefs = [this.chechbox1, this.chechbox2, this.chechbox3];
+  checkboxesNames = ['Money', 'Family', 'Work', 'Lox'];
+  checkboxesRefs = new Array(this.checkboxesNames.length)
+    .fill(null)
+    .map(() => React.createRef<HTMLInputElement>());
 
   getCheckboxValue = function (allCheckbox: React.RefObject<HTMLInputElement>[]) {
     const result: string[] = [];
     allCheckbox.forEach((checkbox) => {
-      console.log(checkbox);
       if (checkbox.current?.checked) result.push(checkbox.current.value);
     });
     return result.join('---');
@@ -66,38 +63,6 @@ export default class Form extends Component<object, FormState> {
             {this.checkboxesNames.map((name, index) => (
               <Checkbox key={index} ref={this.checkboxesRefs[index]} name={name} />
             ))}
-            {/* <div className="checkbox">
-              <input
-                type="checkbox"
-                ref={this.checkboxes[0]}
-                id="money1"
-                name="form"
-                value="money1"
-              />
-              <p>Money1</p>
-            </div>
-
-            <div className="checkbox">
-              <input
-                type="checkbox"
-                ref={this.checkboxes[1]}
-                id="money2"
-                name="form"
-                value="money2"
-              />
-              <p>Money2</p>
-            </div>
-
-            <div className="checkbox">
-              <input
-                type="checkbox"
-                ref={this.checkboxes[2]}
-                id="money3"
-                name="form"
-                value="money3"
-              />
-              <p>Money3</p>
-            </div> */}
           </fieldset>
 
           <button onClick={(event) => this.showName(event)}>Click</button>
